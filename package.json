@@ -1,0 +1,31 @@
+{
+  "name": "wakka-wakka",
+  "author": "acupojava",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Wakka Wakka",
+    "uuid": "07e30875-ded9-44a6-8cb9-fc4ec0c4bc93",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "emery"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [],
+    "resources": {
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "MENU_ICON",
+          "file": "images/wakka-wakka-menu-icon.png",
+          "menuIcon": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Pebble SDK / Waf output
+/build/
+/.lock-waf_linux_build
+/.wafpickle-*
+
+# Generated working assets
+/tmp/
+
+# Internal test archives may contain local paths or transient credentials.
+/reviews/
+/submission/*.log
+
+# Local logs and command state
+*.pid
+*.tmp
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
