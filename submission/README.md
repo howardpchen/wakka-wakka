@@ -1,23 +1,28 @@
-# Wakka Wakka submission prep
+# Wakka Wakka App Store upgrade prep
 
-This directory contains draft Pebble app-store materials. Nothing here has been
-published.
+This directory preserves the original 1.0.0 release artifact and contains the
+prepared 1.1.0 upgrade materials. Uploading or publishing through the developer
+portal remains a separate manual action.
 
 ## Contents
 
 - `listing.md` — short/long descriptions, controls, and compatibility
-- `release-notes.md` — version plan and draft first-release notes
+- `release-notes.md` — release history and 1.1.0 upgrade notes
 - `support.md` — support fields requiring public contact confirmation
 - `privacy.md` — privacy statement
 - `branding-review.md` — originality and IP-risk review
 - `assets/` — original 512×512 artwork plus 144×144 large and 80×80 current
   small App Store icons; a 48×48 legacy small icon is also included
-- `screenshots/` — Emery release-candidate screenshots
+- `screenshots/` — existing Emery listing screenshots
+- `artifacts/wakka-wakka-1.0.0.pbw` — preserved original Emery release
+- `artifacts/wakka-wakka-1.1.0.pbw` — dual-target upgrade candidate
 
 ## Remaining release gates
 
 - Enter the prepared materials in the developer portal.
-- Upload and publish the exact preserved dual-platform `1.0.0` PBW.
-- Create Emery and Basalt asset collections and publish the listing.
+- Upload the exact preserved dual-platform `1.1.0` PBW as an upgrade.
+- Retain the existing Emery asset collection and add Basalt compatibility.
 - Add Basalt screenshots if the developer portal requires a separate
   platform-specific screenshot set.
+- Publish only after reviewing the portal's final compatibility and version
+  summary.

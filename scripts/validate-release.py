@@ -10,7 +10,6 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
 PACKAGE_PATH = ROOT / "package.json"
-PBW_PATH = ROOT / "submission/artifacts/wakka-wakka-1.0.0.pbw"
 CHECKSUM_PATH = ROOT / "submission/SHA256SUMS"
 
 
@@ -21,6 +20,7 @@ def fail(message: str) -> None:
 
 package = json.loads(PACKAGE_PATH.read_text())
 expected = package["pebble"]
+PBW_PATH = ROOT / f"submission/artifacts/wakka-wakka-{package['version']}.pbw"
 
 if not PBW_PATH.is_file():
     fail(f"missing submission artifact: {PBW_PATH.relative_to(ROOT)}")

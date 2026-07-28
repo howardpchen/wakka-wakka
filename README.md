@@ -61,9 +61,9 @@ locally for controls and are neither stored nor transmitted.
 
 ## Release artifact
 
-The audited `1.0.0` PBW, store copy, screenshots, and SHA-256 checksums are in
-[`submission/`](submission/). Generated local SDK output under `build/` is not
-tracked.
+The preserved `1.0.0` release, audited `1.1.0` upgrade PBW, store copy,
+screenshots, and SHA-256 checksums are in [`submission/`](submission/).
+Generated local SDK output under `build/` is not tracked.
 
 ## Project layout
 
