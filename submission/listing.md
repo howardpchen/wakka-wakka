@@ -25,15 +25,13 @@ network connection, or phone service during play.
 
 ## Controls
 
-- Tilt the watch: buffer a turn at the next legal junction
-- UP/DOWN: directional fallback controls
-- SELECT: choose/reverse horizontal movement during play
-- UP: toggle the backlight
-- SELECT: pause/resume and recalibrate tilt
+- Tilt: buffer turns at the next legal junction
+- UP: toggle backlight
+- DOWN: south-direction emulator fallback
+- SELECT: start/restart or pause/resume and recalibrate
 - BACK: exit
 
-On the home or game-over screen, press SELECT to start or restart. Hold the
-watch level during calibration.
+Hold the watch level during calibration.
 
 ## Compatibility
 

@@ -10,11 +10,12 @@ published.
 - `support.md` — support fields requiring public contact confirmation
 - `privacy.md` — privacy statement
 - `branding-review.md` — originality and IP-risk review
-- `assets/` — original launcher/store icon artwork
+- `assets/` — original 512×512 artwork plus 144×144 large and 48×48 small
+  App Store icons
 - `screenshots/` — current-build candidate screenshots
 
 ## Remaining release gates
 
-- Optionally provide a public support URL.
-- Capture replacement screenshots from the `1.0.0` release candidate.
-- Build, validate, and preserve the exact PBW submitted to the store.
+- Enter the prepared materials in the developer portal.
+- Upload and publish the exact preserved `1.0.0` PBW.
+- Create the Emery asset collection and publish the listing.
