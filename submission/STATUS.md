@@ -30,4 +30,5 @@
 - [x] Exact `1.0.0` submission PBW installed on physical Pebble Time 2
 - [x] Dual-platform `1.0.0` submission PBW installed on physical Time Steel
 - [x] Time Steel buttons and generally smooth animation accepted by hc
-- [ ] Revised compact Basalt start and ready typography visually accepted by hc
+- [x] Revised compact Basalt ready typography visually accepted by hc
+- [x] Revised compact Basalt start typography visually accepted by hc

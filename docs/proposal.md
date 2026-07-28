@@ -112,9 +112,8 @@ verify logic, but not wrist ergonomics.
 
 The public 1.0.0 source adds Basalt without forking gameplay. Camera and tile
 visibility already derive from runtime bounds; only the home and HUD layouts
-need compact geometry. The compact home start prompt uses Gothic Bold 14 and
-the compact ready prompt uses Gothic Bold 18, while Emery retains its larger
-fonts.
+need compact geometry. The compact home start prompt uses Gothic 14 and the
+compact ready prompt uses Gothic Bold 18, while Emery retains its larger fonts.
 
 Physical Time Steel testing confirmed working buttons, generally smooth
 animation, and functional gameplay. The smaller viewport reduces the number of

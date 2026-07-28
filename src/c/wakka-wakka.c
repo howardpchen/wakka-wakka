@@ -105,7 +105,7 @@ static uint16_t s_sim_accumulator_ms;
 static GFont s_font_18;
 static GFont s_font_18_bold;
 static GFont s_font_24_bold;
-static GFont s_font_14_bold;
+static GFont s_font_14;
 static char s_hud_text[24];
 static int16_t s_hud_score = -1;
 static int8_t s_hud_lives = -1;
@@ -604,7 +604,7 @@ static void draw_home(GContext *ctx, GRect bounds) {
                      GCornersAll);
   graphics_context_set_text_color(ctx, GColorWhite);
   graphics_draw_text(ctx, "SELECT TO START",
-                     compact ? s_font_14_bold : s_font_18_bold,
+                     compact ? s_font_14 : s_font_18_bold,
                      GRect(20, button_y + (compact ? 2 : 5),
                            bounds.size.w - 40, 26),
                      GTextOverflowModeTrailingEllipsis,
@@ -927,7 +927,7 @@ static void init(void) {
   s_font_18 = fonts_get_system_font(FONT_KEY_GOTHIC_18);
   s_font_18_bold = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
   s_font_24_bold = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
-  s_font_14_bold = fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD);
+  s_font_14 = fonts_get_system_font(FONT_KEY_GOTHIC_14);
   update_backlight();
   s_window = window_create();
   window_set_click_config_provider(s_window, click_config_provider);
