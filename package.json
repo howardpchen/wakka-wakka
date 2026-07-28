@@ -11,7 +11,8 @@
     "sdkVersion": "3",
     "enableMultiJS": true,
     "targetPlatforms": [
-      "emery"
+      "emery",
+      "basalt"
     ],
     "watchapp": {
       "watchface": false

@@ -5,7 +5,7 @@
 - [x] Original launcher/menu icon source and Pebble-sized icon
 - [x] 144×144 large and current 80×80 small App Store icons
 - [x] 48×48 legacy small App Store icon
-- [x] Icon compiled into the Emery PBW
+- [x] Icon compiled into both Emery and Basalt payloads
 - [x] Icon visually checked in the Emery launcher
 - [x] Candidate home and gameplay screenshots
 - [x] Short and long descriptions
@@ -28,3 +28,6 @@
 - [x] New screenshots from the `1.0.0` release candidate
 - [x] Extended physical stability and gameplay test accepted by hc
 - [x] Exact `1.0.0` submission PBW installed on physical Pebble Time 2
+- [x] Dual-platform `1.0.0` submission PBW installed on physical Time Steel
+- [x] Time Steel buttons and generally smooth animation accepted by hc
+- [ ] Revised compact Basalt start and ready typography visually accepted by hc

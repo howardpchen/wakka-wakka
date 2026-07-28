@@ -12,10 +12,12 @@ published.
 - `branding-review.md` — originality and IP-risk review
 - `assets/` — original 512×512 artwork plus 144×144 large and 80×80 current
   small App Store icons; a 48×48 legacy small icon is also included
-- `screenshots/` — current-build candidate screenshots
+- `screenshots/` — Emery release-candidate screenshots
 
 ## Remaining release gates
 
 - Enter the prepared materials in the developer portal.
-- Upload and publish the exact preserved `1.0.0` PBW.
-- Create the Emery asset collection and publish the listing.
+- Upload and publish the exact preserved dual-platform `1.0.0` PBW.
+- Create Emery and Basalt asset collections and publish the listing.
+- Add Basalt screenshots if the developer portal requires a separate
+  platform-specific screenshot set.

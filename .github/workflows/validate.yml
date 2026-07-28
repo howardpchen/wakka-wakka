@@ -24,3 +24,6 @@ jobs:
 
       - name: Validate maze topology
         run: python scripts/validate-maze.py
+
+      - name: Validate preserved release artifact
+        run: python scripts/validate-release.py

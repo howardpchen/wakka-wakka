@@ -8,7 +8,7 @@ The internal development history remains recorded in the review bundles.
 
 ## Draft first-release notes
 
-Initial release of Wakka Wakka for Pebble Time 2:
+Initial release of Wakka Wakka for Pebble Time 2 and Pebble Time Steel:
 
 - Wrist-tilt maze controls with buffered turns
 - Compact scrolling stage with wraparound tunnel
@@ -18,6 +18,7 @@ Initial release of Wakka Wakka for Pebble Time 2:
 - Optional gameplay backlight
 - Fully offline play with no account or configuration required
 - Release build with profiling displays removed
+- Native Emery and Basalt layouts in one PBW
 
 ## Internal build note
 
@@ -32,4 +33,6 @@ route around it, while retaining the center wraparound entrances.
 
 Versions `1.6.0` through `1.6.3` improve motion smoothness and separate the HUD
 from the scrolling playfield. The public `1.0.0` release candidate removes the
-development profiling display.
+development profiling display. The final public build adds a compact Basalt
+layout and physically validated Time Steel support without changing Emery
+gameplay.

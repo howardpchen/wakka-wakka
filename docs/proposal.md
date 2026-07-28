@@ -1,11 +1,13 @@
-# Wakka Wakka: Pebble Time 2 maze-chase proposal
+# Wakka Wakka: Pebble color-watch maze-chase proposal
 
 ## Verdict
 
-A scrolling maze-chase game is technically feasible on Pebble Time 2. Emery
-provides a 200×228, 64-color display, a 240 MHz-class CPU, a 128 KB app/heap
-allowance, and a 6-axis IMU. The main design risk is reliable wrist-tilt input,
-not rendering or maze storage.
+A scrolling maze-chase game is technically feasible on Pebble Time 2 and
+Pebble Time Steel. Emery provides a 200×228, 64-color display, a 240 MHz-class
+CPU, a 128 KB app/heap allowance, and a 6-axis IMU. Basalt provides a 144×168,
+64-color display, a 100 MHz Cortex-M4, a 64 KB app/heap allowance, and an
+accelerometer. The main cross-platform risks are reliable wrist-tilt input,
+compact layout, and frame timing.
 
 This should be an original maze-chase game rather than a public clone using
 another game's names, characters, maze, sounds, or artwork.
@@ -93,7 +95,7 @@ verify logic, but not wrist ergonomics.
 
 ## Prototype acceptance checks
 
-- Target: Pebble Time 2 / Emery only.
+- Target: Pebble Time 2 / Emery and Pebble Time or Time Steel / Basalt.
 - Launch: game begins paused with calibration guidance.
 - SELECT: starts/restarts and pauses/resumes with recalibration.
 - UP: toggles the backlight.
@@ -102,6 +104,18 @@ verify logic, but not wrist ergonomics.
 - Persistence: intentionally absent in the first prototype.
 - Phone/network/configuration: none required.
 - Layout: player, several intersections, score, lives, and buffered direction
-  remain legible on the 200×228 display.
-- Evidence: zero-exit build and PBW, Emery emulator screenshot/runtime log, then
-  separate physical hardware validation.
+  remain legible on both 200×228 and 144×168 displays.
+- Evidence: zero-exit dual-platform build and PBW, platform-specific layout
+  evidence, then separate physical validation on Time 2 and Time Steel.
+
+## Basalt release extension
+
+The public 1.0.0 source adds Basalt without forking gameplay. Camera and tile
+visibility already derive from runtime bounds; only the home and HUD layouts
+need compact geometry. The compact home start prompt uses Gothic Bold 14 and
+the compact ready prompt uses Gothic Bold 18, while Emery retains its larger
+fonts.
+
+Physical Time Steel testing confirmed working buttons, generally smooth
+animation, and functional gameplay. The smaller viewport reduces the number of
+tiles drawn per frame enough to offset much of Basalt's lower CPU speed.

@@ -1,6 +1,7 @@
 # Wakka Wakka
 
-A scrolling maze-chase game for Pebble Time 2, written in native Pebble C.
+A scrolling maze-chase game for Pebble Time 2 and Pebble Time Steel, written in
+native Pebble C.
 
 ![Wakka Wakka gameplay](submission/screenshots/02-gameplay.png)
 
@@ -31,18 +32,26 @@ Requirements:
 
 - Pebble SDK 4.17
 - Pebble Tool 5.x
-- Emery emulator or a Pebble Time 2 connected through CloudPebble
+- Emery or Basalt emulator, or a supported watch connected through CloudPebble
 
 ```sh
 python scripts/validate-maze.py
+python scripts/validate-release.py
 pebble build
 pebble install --emulator emery
+pebble install --emulator basalt
 pebble install --cloudpebble
 ```
 
 ## Target platforms
 
-This release intentionally targets only **emery** (Pebble Time 2).
+This release targets:
+
+- **emery** — Pebble Time 2, with its native 200×228 layout
+- **basalt** — Pebble Time and Pebble Time Steel, with a compact 144×168 layout
+
+The same PBW contains both payloads. The connected watch receives the matching
+platform binary automatically.
 
 ## Privacy
 

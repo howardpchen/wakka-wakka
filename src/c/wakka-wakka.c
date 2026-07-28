@@ -105,6 +105,7 @@ static uint16_t s_sim_accumulator_ms;
 static GFont s_font_18;
 static GFont s_font_18_bold;
 static GFont s_font_24_bold;
+static GFont s_font_14_bold;
 static char s_hud_text[24];
 static int16_t s_hud_score = -1;
 static int8_t s_hud_lives = -1;
@@ -564,34 +565,48 @@ static bool hud_state_changed(void) {
 }
 
 static void draw_home(GContext *ctx, GRect bounds) {
+  const bool compact = bounds.size.h <= 168;
+  const int title_y = compact ? 6 : 15;
+  const int actor_y = compact ? 49 : 70;
+  const int instructions_y = compact ? 66 : 91;
+  const int instructions_h = compact ? 58 : 72;
+  const int button_y = compact ? 130 : 174;
+  const int button_h = compact ? 30 : 36;
+  const int pac_x = compact ? 40 : 70;
+  const int first_pellet_x = compact ? 59 : 91;
+  const int last_pellet_x = compact ? 87 : 119;
+  const int ghost_x = compact ? 106 : 141;
+
   graphics_context_set_text_color(ctx, GColorYellow);
   graphics_draw_text(ctx, "WAKKA WAKKA",
                      s_font_24_bold,
-                     GRect(4, 15, bounds.size.w - 8, 32),
+                     GRect(4, title_y, bounds.size.w - 8, 32),
                      GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentCenter, NULL);
 
-  draw_pac(ctx, 70, 70);
+  draw_pac(ctx, pac_x, actor_y);
   graphics_context_set_fill_color(ctx, GColorWhite);
-  for (int x = 91; x <= 119; x += 14) {
-    graphics_fill_circle(ctx, GPoint(x, 70), 2);
+  for (int x = first_pellet_x; x <= last_pellet_x; x += 14) {
+    graphics_fill_circle(ctx, GPoint(x, actor_y), 2);
   }
-  draw_ghost(ctx, 141, 70, GColorRed);
+  draw_ghost(ctx, ghost_x, actor_y, GColorRed);
 
   graphics_context_set_text_color(ctx, GColorWhite);
   graphics_draw_text(ctx,
                      "TILT TO TURN\nUP: LIGHT\nSELECT: PAUSE",
                      s_font_18,
-                     GRect(8, 91, bounds.size.w - 16, 72),
+                     GRect(8, instructions_y, bounds.size.w - 16,
+                           instructions_h),
                      GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
 
   graphics_context_set_fill_color(ctx, GColorBlueMoon);
-  graphics_fill_rect(ctx, GRect(27, 174, bounds.size.w - 54, 36), 5,
+  graphics_fill_rect(ctx, GRect(18, button_y, bounds.size.w - 36, button_h), 5,
                      GCornersAll);
   graphics_context_set_text_color(ctx, GColorWhite);
   graphics_draw_text(ctx, "SELECT TO START",
-                     s_font_18_bold,
-                     GRect(30, 179, bounds.size.w - 60, 26),
+                     compact ? s_font_14_bold : s_font_18_bold,
+                     GRect(20, button_y + (compact ? 2 : 5),
+                           bounds.size.w - 40, 26),
                      GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentCenter, NULL);
 }
@@ -605,14 +620,18 @@ static void home_layer_update(Layer *layer, GContext *ctx) {
 
 static void hud_layer_update(Layer *layer, GContext *ctx) {
   GRect bounds = layer_get_bounds(layer);
+  const bool compact = bounds.size.w <= 144;
+  const int label_w = compact ? 48 : 62;
   graphics_context_set_fill_color(ctx, GColorBlack);
   graphics_fill_rect(ctx, bounds, 0, GCornerNone);
   graphics_context_set_text_color(ctx, GColorWhite);
   graphics_draw_text(ctx, "WAKKA", s_font_18_bold,
-                     GRect(4, -2, 62, HUD_H), GTextOverflowModeTrailingEllipsis,
+                     GRect(4, -2, label_w, HUD_H),
+                     GTextOverflowModeTrailingEllipsis,
                      GTextAlignmentLeft, NULL);
   graphics_draw_text(ctx, hud_text(), s_font_18,
-                     GRect(66, -2, bounds.size.w - 70, HUD_H),
+                     GRect(label_w + 4, -2,
+                           bounds.size.w - label_w - 8, HUD_H),
                      GTextOverflowModeTrailingEllipsis, GTextAlignmentRight,
                      NULL);
 }
@@ -715,7 +734,7 @@ static void game_layer_update(Layer *layer, GContext *ctx) {
     graphics_draw_round_rect(ctx, GRect(28, 69, bounds.size.w - 56, 48), 5);
     graphics_context_set_text_color(ctx, GColorYellow);
     graphics_draw_text(ctx, "GET READY!!",
-                       s_font_24_bold,
+                       bounds.size.w <= 144 ? s_font_18_bold : s_font_24_bold,
                        GRect(31, 76, bounds.size.w - 62, 34),
                        GTextOverflowModeTrailingEllipsis,
                        GTextAlignmentCenter, NULL);
@@ -908,6 +927,7 @@ static void init(void) {
   s_font_18 = fonts_get_system_font(FONT_KEY_GOTHIC_18);
   s_font_18_bold = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
   s_font_24_bold = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
+  s_font_14_bold = fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD);
   update_backlight();
   s_window = window_create();
   window_set_click_config_provider(s_window, click_config_provider);
