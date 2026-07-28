@@ -41,5 +41,5 @@
 - [x] Revised compact Basalt ready typography visually accepted by hc
 - [x] Revised compact Basalt start typography visually accepted by hc
 - [x] Basalt home screenshot captured from physical Time Steel
-- [ ] GitHub commit, remote SHA, and CI verified for the 1.1.0 candidate
+- [x] GitHub commit, remote SHA, and CI verified for the 1.1.0 candidate
 - [ ] Upgrade entered and reviewed in the developer portal
