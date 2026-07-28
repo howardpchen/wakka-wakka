@@ -10,8 +10,8 @@ published.
 - `support.md` — support fields requiring public contact confirmation
 - `privacy.md` — privacy statement
 - `branding-review.md` — originality and IP-risk review
-- `assets/` — original 512×512 artwork plus 144×144 large and 48×48 small
-  App Store icons
+- `assets/` — original 512×512 artwork plus 144×144 large and 80×80 current
+  small App Store icons; a 48×48 legacy small icon is also included
 - `screenshots/` — current-build candidate screenshots
 
 ## Remaining release gates

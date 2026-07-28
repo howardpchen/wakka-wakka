@@ -3,7 +3,8 @@
 ## Prepared
 
 - [x] Original launcher/menu icon source and Pebble-sized icon
-- [x] 144×144 large and 48×48 small App Store icons
+- [x] 144×144 large and current 80×80 small App Store icons
+- [x] 48×48 legacy small App Store icon
 - [x] Icon compiled into the Emery PBW
 - [x] Icon visually checked in the Emery launcher
 - [x] Candidate home and gameplay screenshots
