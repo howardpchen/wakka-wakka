@@ -3,6 +3,8 @@
 A scrolling maze-chase game for Pebble Time 2 and Pebble Time Steel, written in
 native Pebble C.
 
+[Get Wakka Wakka from the RePebble App Store](https://apps.repebble.com/d7730c67fb89412e9c655cfd)
+
 ![Wakka Wakka gameplay](submission/screenshots/02-gameplay.png)
 
 The runner moves automatically while four rivals pursue through the scrolling
@@ -61,7 +63,7 @@ locally for controls and are neither stored nor transmitted.
 
 ## Release artifact
 
-The preserved `1.0.0` release, audited `1.1.0` upgrade PBW, store copy,
+The preserved `1.0.0` release, published `1.1.0` upgrade PBW, store copy,
 screenshots, and SHA-256 checksums are in [`submission/`](submission/).
 Generated local SDK output under `build/` is not tracked.
 

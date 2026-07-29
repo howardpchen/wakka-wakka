@@ -1,8 +1,7 @@
 # Wakka Wakka App Store upgrade prep
 
-This directory preserves the original 1.0.0 release artifact and contains the
-prepared 1.1.0 upgrade materials. Uploading or publishing through the developer
-portal remains a separate manual action.
+This directory preserves the original 1.0.0 release artifact and the exact
+1.1.0 upgrade materials published to the RePebble App Store.
 
 ## Contents
 
@@ -15,14 +14,15 @@ portal remains a separate manual action.
   small App Store icons; a 48×48 legacy small icon is also included
 - `screenshots/` — existing Emery listing screenshots
 - `artifacts/wakka-wakka-1.0.0.pbw` — preserved original Emery release
-- `artifacts/wakka-wakka-1.1.0.pbw` — dual-target upgrade candidate
+- `artifacts/wakka-wakka-1.1.0.pbw` — published dual-target upgrade
 
-## Remaining release gates
+## Publication
 
-- Enter the prepared materials in the developer portal.
-- Upload the exact preserved dual-platform `1.1.0` PBW as an upgrade.
-- Retain the existing Emery asset collection and add Basalt compatibility.
-- Add Basalt screenshots if the developer portal requires a separate
-  platform-specific screenshot set.
-- Publish only after reviewing the portal's final compatibility and version
-  summary.
+Version `1.1.0` is published at
+<https://apps.repebble.com/d7730c67fb89412e9c655cfd> with native `emery` and
+`basalt` payloads. The Basalt listing uses a screenshot captured from the exact
+release candidate running on a physical Pebble Time Steel.
+
+The published PBW is byte-for-byte identical to
+`artifacts/wakka-wakka-1.1.0.pbw`; its SHA-256 checksum is recorded alongside
+the artifact.

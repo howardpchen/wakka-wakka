@@ -42,4 +42,13 @@
 - [x] Revised compact Basalt start typography visually accepted by hc
 - [x] Basalt home screenshot captured from physical Time Steel
 - [x] GitHub commit, remote SHA, and CI verified for the 1.1.0 candidate
-- [ ] Upgrade entered and reviewed in the developer portal
+- [x] Upgrade entered and reviewed in the developer portal
+- [x] Version `1.1.0` published with Emery and Basalt platform support
+- [x] Basalt listing screenshot uploaded from the physical Time Steel
+
+## Published listing
+
+- App ID: `d7730c67fb89412e9c655cfd`
+- Storefront: <https://apps.repebble.com/d7730c67fb89412e9c655cfd>
+- Published package version: `1.1.0`
+- Published platforms: `emery`, `basalt`
